@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ConversationActivity">
+
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/navigation_shadow">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_chat"
+            android:layout_margin="@dimen/grid_2"
+            android:layout_width="@dimen/standard_height"
+            android:layout_height="@dimen/standard_height"
+            app:cardCornerRadius="@dimen/cord_corner_radius">
+            <ImageView
+                android:id="@+id/iv_topPhoto"
+                android:layout_width="@dimen/standard_height"
+                android:layout_height="@dimen/standard_height"
+                android:layout_marginRight="@dimen/grid_1"
+                android:scaleType="center"/>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tp_topName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            style="@style/Text"
+            android:paddingLeft="@dimen/grid_1"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ed_message"
+        app:layout_constraintTop_toBottomOf="@+id/navigationLayout" />
+
+    <Button
+        android:id="@+id/button_send"
+        style="@style/SendButton"
+        android:layout_width="@dimen/send_width"
+        android:layout_height="@dimen/send_height"
+        android:layout_margin="@dimen/grid_1"
+        android:onClick="onSend"
+        android:text="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_send"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/grid_1"
+        android:padding="@dimen/grid_1"
+        android:gravity="center_vertical"
+        android:hint="Message"
+        android:minHeight="@dimen/send_min_height"
+        android:maxHeight="@dimen/send_max_height"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WhatsappClone" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/clr_primary</item>
+        <item name="colorPrimaryVariant">@color/clr_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/clr_secondary</item>
+        <item name="colorSecondaryVariant">@color/clr_secondary_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.WhatsappClone.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.WhatsappClone.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.WhatsappClone.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="StandardButton">
+        <item name="background">@drawable/standard_button_rounded</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/standard_text_size</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+    
+    <style name="Text">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="LinkText" parent="Text">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SendButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/standard_text_size</item>
+        <item name="android:background">@drawable/send_button_rounded</item>
+    </style>
+
+    <style name="ChatBubble">
+        <item name="android:textSize">18dp</item>
+        <item name="minHeight">50dp</item>
+        <item name="maxHeight">300dp</item>
+    </style>
+</resources>
